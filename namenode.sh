@@ -24,7 +24,7 @@ echo '</configuration>' >> /etc/hadoop/core-site.xml
 
 echo 3 > /proc/sys/vm/drop_caches
 mkdir /namenode
-hadoop namenode -format -y
+echo Y | hadoop namenode -format
 hadoop-daemon.sh start namenode
 jps
 hadoop dfsadmin -report
